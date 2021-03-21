@@ -16,4 +16,8 @@ public class Pet {
         return name;
     }
 
+
+    public String speak() {
+        return "animal noises";
+    }
 }
