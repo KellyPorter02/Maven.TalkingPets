@@ -3,14 +3,12 @@ package io.zipcoder.polymorphism;
 import org.junit.Assert;
 import org.junit.Test;
 
-import static org.junit.Assert.*;
-
 public class PetTest {
 
     @Test
     public void setNameTest() {
         // Arrange
-        Pet testPet = new Pet("Leon");
+        Pet testPet = new Pet("Leon", "Cat");
         // Act
         testPet.setName("Bridges");
         String returnedName = testPet.getName();
@@ -21,7 +19,7 @@ public class PetTest {
     @Test
     public void getNameTest() {
         // Arrange
-        Pet testPet = new Pet("Leon");
+        Pet testPet = new Pet("Leon", "Cat");
         // Act
         String returnedName = testPet.getName();
         // Assert
@@ -29,10 +27,10 @@ public class PetTest {
     }
 
     @Test
-    public void constructorTest() {
+    public void constructorTestName() {
         // Arrange
         String givenName = "Leon";
-        Pet testPet = new Pet(givenName);
+        Pet testPet = new Pet(givenName, "Cat");
         // Act
         String returnedName = testPet.getName();
         // Assert
@@ -40,9 +38,20 @@ public class PetTest {
     }
 
     @Test
+    public void constructorTestTypePet() {
+        // Arrange
+        String givenTypeOfPet = "Cat";
+        Pet testPet = new Pet("Leon", givenTypeOfPet);
+        // Act
+        String returnedPetType = testPet.getType();
+        // Assert
+        Assert.assertEquals(givenTypeOfPet, returnedPetType);
+    }
+
+    @Test
     public void speakTest() {
         // Arrange
-        Pet testPet = new Pet("Leon");
+        Pet testPet = new Pet("Leon", "Cat");
         // Act
         String speakString = testPet.speak();
         // Assert

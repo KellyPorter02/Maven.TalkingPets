@@ -26,7 +26,7 @@ public class MainApplication {
     }
 
     PetOwner kelly = new PetOwner();
-    Pet kellyCat = new Cat("DaBaby");
+    Pet kellyCat = new Cat("DaBaby", "Cat");
 
 
 }
