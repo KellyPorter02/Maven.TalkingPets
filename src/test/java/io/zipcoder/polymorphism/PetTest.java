@@ -8,7 +8,7 @@ public class PetTest {
     @Test
     public void setNameTest() {
         // Arrange
-        Pet testPet = new Pet("Leon", "Cat");
+        Pet testPet = new Pet("Leon");
         // Act
         testPet.setName("Bridges");
         String returnedName = testPet.getName();
@@ -19,7 +19,7 @@ public class PetTest {
     @Test
     public void getNameTest() {
         // Arrange
-        Pet testPet = new Pet("Leon", "Cat");
+        Pet testPet = new Pet("Leon");
         // Act
         String returnedName = testPet.getName();
         // Assert
@@ -30,28 +30,18 @@ public class PetTest {
     public void constructorTestName() {
         // Arrange
         String givenName = "Leon";
-        Pet testPet = new Pet(givenName, "Cat");
+        Pet testPet = new Pet(givenName);
         // Act
         String returnedName = testPet.getName();
         // Assert
         Assert.assertEquals(givenName, returnedName);
     }
 
-    @Test
-    public void constructorTestTypePet() {
-        // Arrange
-        String givenTypeOfPet = "Cat";
-        Pet testPet = new Pet("Leon", givenTypeOfPet);
-        // Act
-        String returnedPetType = testPet.getType();
-        // Assert
-        Assert.assertEquals(givenTypeOfPet, returnedPetType);
-    }
 
     @Test
     public void speakTest() {
         // Arrange
-        Pet testPet = new Pet("Leon", "Cat");
+        Pet testPet = new Pet("Leon");
         // Act
         String speakString = testPet.speak();
         // Assert

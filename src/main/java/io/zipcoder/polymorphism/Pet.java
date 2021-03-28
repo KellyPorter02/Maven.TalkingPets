@@ -3,11 +3,11 @@ package io.zipcoder.polymorphism;
 public class Pet {
 
     private String name;
-    private String petType;
 
-    public Pet(String name, String petType) {
+
+    public Pet(String name) {
         this.name = name;
-        this.petType = petType;
+
     }
 
     public void setName(String newName) {
@@ -23,8 +23,6 @@ public class Pet {
         return "animal noises";
     }
 
-    public String getType() {
-        return petType;
-    }
+
 
 }
